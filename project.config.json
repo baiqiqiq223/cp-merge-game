@@ -2,15 +2,32 @@
   "miniprogramRoot": "dist/",
   "projectname": "wechat-mini-game",
   "description": "Taro React TypeScript WeChat mini game",
-  "appid": "touristappid",
+  "appid": "wx116758fa3f3b16dc",
   "setting": {
     "urlCheck": false,
     "es6": true,
     "enhance": true,
     "postcss": true,
     "minified": true,
-    "compileHotReLoad": true
+    "compileHotReLoad": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    }
   },
   "compileType": "miniprogram",
-  "condition": {}
+  "condition": {},
+  "libVersion": "3.16.0",
+  "isGameTourist": true,
+  "srcMiniprogramRoot": "dist/",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  },
+  "simulatorPluginLibVersion": {}
 }

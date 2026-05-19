@@ -5,6 +5,8 @@
 ## 运行
 
 ```bash
+corepack enable
+corepack prepare pnpm@9.15.9 --activate
 pnpm install
 pnpm dev:weapp
 ```
@@ -23,6 +25,27 @@ nvm use
 corepack enable
 corepack prepare pnpm@9.15.9 --activate
 pnpm install
+```
+
+如果执行 `pnpm dev:weapp` 出现 `'taro' 不是内部或外部命令`，说明当前依赖还没有安装成功，或终端没有使用项目声明的 pnpm。按下面顺序重新执行：
+
+```bash
+corepack enable
+corepack prepare pnpm@9.15.9 --activate
+pnpm install
+pnpm exec taro --version
+pnpm dev:weapp
+```
+
+如果构建卡在 `babel-preset-taro` 或 Taro CLI 的依赖解析错误，先清理后重装：
+
+```bash
+Remove-Item -Recurse -Force node_modules, pnpm-lock.yaml
+nvm use
+corepack enable
+corepack prepare pnpm@9.15.9 --activate
+pnpm install
+pnpm dev:weapp
 ```
 
 ## 远程仓库
